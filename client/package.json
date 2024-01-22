@@ -1,0 +1,30 @@
+{
+  "name": "ahub",
+  "version": "1.0.0",
+  "description": "AHUB [fronted]",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint src/**/*.{ts, tsx}",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "mrlearn",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/node": "20.11.5",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "typescript": "^5.3.3"
+  }
+}
