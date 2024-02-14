@@ -1,18 +1,22 @@
-module.exports = {
+ /** @type {import('next').NextConfig} */
+
+const nextConfig = {
     reactStrictMode: true,
-    webpack(config, options) {
-        config.module.rules.push({
-            test: /\.svg$/i,
-            issure: { and: [/\.(ts)x?$/] },
-            use: [
-                {
-                    loader: "@svgr/webpack",
-                    options: {
-                        svgoConfig: { plugins: [{ removeViewBox: false }] },
-                    },
-                },
-            ],
-        });
-        return config;
+    eslint: {
+        ignoreDuringBuilds: true,
     },
+    experimental: {
+        esmExternals: true,
+    },
+    compiler: {
+        styledComponents: true,
+    },
+    // webpack5: true,
+    webpack: (config) => {
+        config.resolve.fallback = { fs: false }
+
+        return config
+    }
 };
+
+module.exports = nextConfig
